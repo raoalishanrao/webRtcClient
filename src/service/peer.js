@@ -1,14 +1,11 @@
 class PeerService {
     constructor() {
+
         if (!this.peer) {
             this.peer = new RTCPeerConnection({
                 iceServers: [
                     {
-                        urls: [
-                            "stun:stun.l.google.com:19302",
-                            "stun:global.stun.twilio.com:3478",
-                            "stun:stun.relay.metered.ca:80"
-                        ],
+                        urls: "stun:stun.relay.metered.ca:80",
                     },
                     {
                         urls: "turn:a.relay.metered.ca:80",
